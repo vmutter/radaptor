@@ -23,7 +23,7 @@ public class Radaptor {
             final Field toField = to.getDeclaredField(name);
             final Field fromField = from.getDeclaredField(Handbook.getFieldName(toField));
             if (fromField != null) {
-                Mirror.set(toField, toObject, Mirror.get(fromField, fromObject));
+                Mirror.set(toField, toObject, Mirror.get(fromField, fromObject, toField.getType()));
             }
         }
         return clazz.cast(toObject);
@@ -41,9 +41,8 @@ public class Radaptor {
             final Field toField = to.getDeclaredField(name);
             final Field fromField = from.getDeclaredField(Handbook.getFieldName(toField));
             if (fromField != null) {
-                final Method m = toObjectBuilder.getClass().getDeclaredMethod(name,
-                    from.getDeclaredField(fromField.getName()).getType());
-                m.invoke(toObjectBuilder, Mirror.get(fromField, fromObject));
+                final Method m = toObjectBuilder.getClass().getDeclaredMethod(name, toField.getType());
+                m.invoke(toObjectBuilder, Mirror.get(fromField, fromObject, toField.getType()));
             }
         }
 

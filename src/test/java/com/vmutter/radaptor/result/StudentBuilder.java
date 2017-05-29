@@ -15,4 +15,6 @@ public class StudentBuilder {
 
     private String grade;
 
+    private Integer age;
+
 }

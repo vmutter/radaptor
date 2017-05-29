@@ -30,6 +30,7 @@ public class RadaptorAdaptTest {
         student.setName("name");
         student.setLastName("lastName");
         student.setGrade("grade");
+        student.setAge("16");
     }
 
     @Test
@@ -55,6 +56,7 @@ public class RadaptorAdaptTest {
         assertThat(adaptedStudent.getName(), is(student.getName()));
         assertThat(adaptedStudent.getSurName(), is(student.getLastName()));
         assertThat(adaptedStudent.getGrade(), is(student.getGrade()));
+        assertThat(adaptedStudent.getAge(), is(Integer.parseInt(student.getAge())));
     }
 
     @Test
@@ -64,6 +66,7 @@ public class RadaptorAdaptTest {
         assertThat(buildStudent.getName(), is(student.getName()));
         assertThat(buildStudent.getSurName(), is(student.getLastName()));
         assertThat(buildStudent.getGrade(), is(student.getGrade()));
+        assertThat(buildStudent.getAge(), is(Integer.parseInt(student.getAge())));
     }
 
 }

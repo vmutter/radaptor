@@ -13,4 +13,6 @@ public class StudentAdapt {
 
     private String grade;
 
+    private Integer age;
+
 }
