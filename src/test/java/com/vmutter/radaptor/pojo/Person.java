@@ -1,4 +1,4 @@
-package com.vmutter.pojo;
+package com.vmutter.radaptor.pojo;
 
 import lombok.Data;
 

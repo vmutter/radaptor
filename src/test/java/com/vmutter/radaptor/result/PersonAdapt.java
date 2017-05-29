@@ -1,6 +1,6 @@
-package com.vmutter.result;
+package com.vmutter.radaptor.result;
 
-import com.vmutter.annotation.Alias;
+import com.vmutter.radaptor.annotation.Alias;
 import lombok.Data;
 
 @Data

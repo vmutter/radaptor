@@ -1,4 +1,4 @@
-package com.vmutter;
+package com.vmutter.radaptor;
 
 import lombok.Data;
 

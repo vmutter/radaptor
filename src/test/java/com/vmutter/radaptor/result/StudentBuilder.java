@@ -1,16 +1,18 @@
-package com.vmutter.result;
+package com.vmutter.radaptor.result;
 
-import com.vmutter.annotation.Alias;
+import com.vmutter.radaptor.annotation.Alias;
 import lombok.Builder;
 import lombok.Value;
 
 @Builder
 @Value
-public class PersonBuilder {
+public class StudentBuilder {
 
     private String name;
 
     @Alias("lastName")
     private String surName;
+
+    private String grade;
 
 }
